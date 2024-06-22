@@ -1,4 +1,4 @@
-export function InjuredPlayerThead() {
+export function DashboardThead() {
   return (
     <thead>
       <tr className="text-gray-500 text-xs *:text-center">
