@@ -1,9 +1,10 @@
 import { Skeleton } from "@/components/atoms/common/skeleton";
+import { InjuredPlayerCard } from "./injured-player-card";
 
-export default function DashboardBody() {
+export function DashboardBody() {
   return (
     <div>
-      <Skeleton className=" w-[100px] h-[10px]" />
+      <InjuredPlayerCard />
     </div>
   );
 }
