@@ -1,10 +1,11 @@
-import { Skeleton } from "@/components/atoms/common/skeleton";
 import { InjuredPlayerCard } from "./injured-player-card";
+import { RecoveryPlayerCard } from "./recovery-player-card";
 
 export function DashboardBody() {
   return (
-    <div>
+    <div className="flex my-32 justify-evenly w-full">
       <InjuredPlayerCard />
+      <RecoveryPlayerCard />
     </div>
   );
 }
