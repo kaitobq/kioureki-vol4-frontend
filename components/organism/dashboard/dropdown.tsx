@@ -17,7 +17,7 @@ export function Dropdown({ list, defaultValue }: DropdownProps) {
     console.log("change default value!");
   });
   return (
-    <>
+    <div className="relative">
       <DropdownTrigger stateRef={stateRef} setStateRef={setStateRef}>
         {currentValue}
       </DropdownTrigger>
@@ -27,6 +27,6 @@ export function Dropdown({ list, defaultValue }: DropdownProps) {
         dropdownList={list} //list
         setCurrentValue={setCurrentValue}
       />
-    </>
+    </div>
   );
 }
