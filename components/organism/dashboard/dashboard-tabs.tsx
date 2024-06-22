@@ -1,13 +1,11 @@
 "use client";
 
-import useMedicalRecord from "@/lib/hooks/dashboard/use-medical-records";
 import { useSearchParams } from "next/navigation";
-import { MedicalRecordTab } from "./medical-record_tab";
-import { RehabilitationTab } from "./rehabilitation-tab";
-import { PlayerTab } from "./player-tab";
+import { MedicalRecordTab } from "../../molecules/dashboard/medical-record_tab";
+import { RehabilitationTab } from "../../molecules/dashboard/rehabilitation-tab";
+import { PlayerTab } from "../../molecules/dashboard/player-tab";
 
 export function DashboardTabs() {
-  const { medicalRecords, loading } = useMedicalRecord();
   const params = useSearchParams();
   return (
     <div>

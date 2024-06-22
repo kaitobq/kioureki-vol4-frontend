@@ -1,6 +1,6 @@
 import { DashboardBody } from "@/components/molecules/dashboard/dashboard-body";
 import { DashboardHeader } from "../../molecules/dashboard/dashboard-header";
-import { DashboardTabs } from "@/components/molecules/dashboard/dashboard-tabs";
+import { DashboardTabs } from "./dashboard-tabs";
 
 export default function Dashboard() {
   return (
