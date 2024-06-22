@@ -3,7 +3,7 @@
 import { SkeletonTable } from "@/components/atoms/dashboard/skeleton-table";
 import { Card } from "../../atoms/common/card";
 import { useInjuredThisWeek } from "@/lib/hooks/dashboard/use-injured-thisweek";
-import { DashboardThead } from "@/components/atoms/dashboard/dashboard-thead";
+import { DashboardTHead } from "@/components/atoms/dashboard/dashboard-thead";
 import { DashboardTBody } from "@/components/atoms/dashboard/dashboard-tbody";
 
 export function InjuredPlayerCard() {
@@ -14,7 +14,7 @@ export function InjuredPlayerCard() {
         直近１週間で受傷した選手
       </h3>
       <table className="*:border-b">
-        <DashboardThead />
+        <DashboardTHead />
         <tbody className="*:border-b">
           {loading || !injuredThisWeek ? (
             <SkeletonTable />

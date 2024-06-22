@@ -1,4 +1,4 @@
-export function DashboardThead() {
+export function DashboardTHead() {
   return (
     <thead>
       <tr className="text-gray-500 text-xs *:text-center">
