@@ -1,10 +1,10 @@
 import { MedicalRecord } from "@/types/dashboard/medical-record";
 
-interface InjuredPlayerTableProps {
+interface DashboardTBodyProps {
   records: MedicalRecord[];
 }
 
-export function InjuredPlayerTable({ records }: InjuredPlayerTableProps) {
+export function DashboardTBody({ records }: DashboardTBodyProps) {
   return (
     <>
       {records.map((record) => (

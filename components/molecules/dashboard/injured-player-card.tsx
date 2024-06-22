@@ -3,8 +3,8 @@
 import { SkeletonTable } from "@/components/atoms/dashboard/skeleton-table";
 import { Card } from "../../atoms/common/card";
 import { useInjuredThisWeek } from "@/lib/hooks/dashboard/use-injured-thisweek";
-import { InjuredPlayerTable } from "@/components/atoms/dashboard/injured-player-table";
 import { DashboardThead } from "@/components/atoms/dashboard/dashboard-thead";
+import { DashboardTBody } from "@/components/atoms/dashboard/dashboard-tbody";
 
 export function InjuredPlayerCard() {
   const { injuredThisWeek, loading } = useInjuredThisWeek();
@@ -19,7 +19,7 @@ export function InjuredPlayerCard() {
           {loading || !injuredThisWeek ? (
             <SkeletonTable />
           ) : (
-            <InjuredPlayerTable records={injuredThisWeek} />
+            <DashboardTBody records={injuredThisWeek} />
           )}
         </tbody>
       </table>
