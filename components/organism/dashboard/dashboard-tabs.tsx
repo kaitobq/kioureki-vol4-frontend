@@ -8,7 +8,7 @@ import { PlayerTab } from "../../molecules/dashboard/player-tab";
 export function DashboardTabs() {
   const params = useSearchParams();
   return (
-    <div>
+    <div className="w-full flex justify-center">
       {params.get("tab") === "medicalrecord" && <MedicalRecordTab />}
       {params.get("tab") === "rehabilitation" && <RehabilitationTab />}
       {params.get("tab") === "player" && <PlayerTab />}

@@ -1,11 +1,10 @@
-import { medicalRecordAtom } from "@/lib/atom/medical-record";
-import { useAtom } from "jotai";
+import { AddMedicalRecord } from "./add-medical-record";
 import { MedicalRecordTable } from "./medical-record-table";
 
 export function MedicalRecordTab() {
-  const [medicalrecord] = useAtom(medicalRecordAtom);
   return (
-    <div>
+    <div className="w-[320px] sm:w-11/12">
+      <AddMedicalRecord />
       <MedicalRecordTable />
     </div>
   );
