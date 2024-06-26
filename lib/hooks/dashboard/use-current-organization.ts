@@ -1,10 +1,12 @@
 "use client";
 
-import { organizationAtom } from "@/lib/atom/organizations";
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import { getCookie, setCookie } from "../cookie/use-cookie";
-import { currentOrganizationAtom } from "@/lib/atom/current-organization";
+import {
+  currentOrganizationAtom,
+  organizationAtom,
+} from "@/lib/atom/dashboard";
 
 export function useCurrentOrganization() {
   const [organizations] = useAtom(organizationAtom);

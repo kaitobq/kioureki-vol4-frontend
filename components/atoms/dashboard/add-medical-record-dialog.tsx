@@ -12,7 +12,9 @@ export function AddMedicalRecordDialog({
 }: AddMedicalRecordDialogProps) {
   return (
     <Dialog open={open} toggleDialog={toggleDialog}>
-      <form action="">aaafklanandfknlaflkafnlakkkk</form>
+      <form action="">
+        <h2>データの追加</h2>
+      </form>
       <Button>追加</Button>
     </Dialog>
   );

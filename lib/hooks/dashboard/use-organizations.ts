@@ -2,8 +2,8 @@ import { useAtom } from "jotai";
 import apiClient from "@/lib/utils/api/apiclient";
 import { getCookie } from "../cookie/use-cookie";
 import { useEffect } from "react";
-import { organizationAtom } from "@/lib/atom/organizations";
 import { Organization } from "@/types/dashboard/organization";
+import { organizationAtom } from "@/lib/atom/dashboard";
 
 export function useOrganization() {
   const [organizations, setOrganizations] = useAtom(organizationAtom);

@@ -1,9 +1,11 @@
-import { currentOrganizationAtom } from "@/lib/atom/current-organization";
-import { medicalRecordAtom } from "@/lib/atom/medical-record";
 import { useAtom } from "jotai";
 import { useEffect, useState } from "react";
 import { getCookie } from "../cookie/use-cookie";
 import apiClient from "@/lib/utils/api/apiclient";
+import {
+  currentOrganizationAtom,
+  medicalRecordAtom,
+} from "@/lib/atom/dashboard";
 
 export default function useMedicalRecord() {
   const [currentOrganization] = useAtom(currentOrganizationAtom);

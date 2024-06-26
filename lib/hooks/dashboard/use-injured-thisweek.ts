@@ -1,9 +1,9 @@
-import { currentOrganizationAtom } from "@/lib/atom/current-organization";
 import apiClient from "@/lib/utils/api/apiclient";
 import { useAtom } from "jotai";
 import { getCookie } from "../cookie/use-cookie";
 import { useEffect, useState } from "react";
 import { MedicalRecord } from "@/types/dashboard/medical-record";
+import { currentOrganizationAtom } from "@/lib/atom/dashboard";
 
 export function useInjuredThisWeek() {
   const [currentOrganization] = useAtom(currentOrganizationAtom);
