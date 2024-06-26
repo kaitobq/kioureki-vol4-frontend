@@ -8,5 +8,7 @@ interface AuthProviderProps {
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const { user, loading, error, refetch: fetchUser } = useUser();
-  return <>{children}</>;
+  if(!loading){
+    return <>{children}</>;
+  }
 }
