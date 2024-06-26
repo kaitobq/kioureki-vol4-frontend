@@ -1,12 +1,13 @@
 import { Button } from "@/components/atoms/common/button";
 import { Card } from "@/components/atoms/common/card";
+import { Input } from "@/components/atoms/common/input";
 import { useSignup } from "@/lib/hooks/auth/use-signup";
 
 export function SignupTab() {
   const { register, handleSubmit, errors, onSubmit, loading } = useSignup();
 
   return (
-    <Card className="w-[400px]">
+    <Card className="w-[400px] shadow-md">
       <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
         <h5 className="text-xl font-medium text-gray-900">新規登録</h5>
         <div>
@@ -16,11 +17,10 @@ export function SignupTab() {
           >
             Username
           </label>
-          <input
+          <Input
             type="text"
             id="username"
             {...register("username")}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="username"
           />
           {errors.username && (
@@ -34,11 +34,10 @@ export function SignupTab() {
           >
             Email
           </label>
-          <input
+          <Input
             type="email"
             id="email"
             {...register("email")}
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="someone@example.com"
           />
           {errors.email && (
@@ -52,12 +51,11 @@ export function SignupTab() {
           >
             Password
           </label>
-          <input
+          <Input
             type="password"
             id="password"
             {...register("password")}
             placeholder="••••••••"
-            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           />
           {errors.password && (
             <p className="text-red-500 text-sm">{errors.password.message}</p>

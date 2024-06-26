@@ -1,6 +1,6 @@
 import { AddMedicalRecordDialog } from "@/components/atoms/dashboard/add-medical-record-dialog";
 import { DialogTrigger } from "@/components/atoms/dashboard/dialog-trigger";
-import { useCallback, useRef, useState } from "react";
+import { useState } from "react";
 
 export function AddMedicalRecord() {
   const [open, setOpen] = useState(false);

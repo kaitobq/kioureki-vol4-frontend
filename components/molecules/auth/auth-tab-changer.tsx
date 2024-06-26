@@ -15,7 +15,7 @@ export function AuthTabChanger({ setStateRef, stateRef }: AuthTabChangerProps) {
         className={clsx(
           "px-4 py-2 text-sm font-medium  rounded-s-lg focus:ring-1 focus:ring-blue-700 hover:bg-gray-100 hover:text-blue-700 focus:text-blue-700",
           {
-            "text-gray-900 bg-white z-10": isLoginTab === true,
+            "text-gray-900 bg-white z-10 drop-shadow-xl": isLoginTab === true,
             "text-gray-900 bg-gray-300 z-0": isLoginTab === false,
           }
         )}
@@ -32,7 +32,7 @@ export function AuthTabChanger({ setStateRef, stateRef }: AuthTabChangerProps) {
         className={clsx(
           "px-4 py-2 text-sm font-medium  rounded-e-lg focus:ring-1 focus:ring-blue-700 hover:bg-gray-100 hover:text-blue-700 focus:text-blue-700",
           {
-            "text-gray-900 bg-white z-10": isLoginTab === false,
+            "text-gray-900 bg-white z-10 drop-shadow-lg": isLoginTab === false,
             "text-gray-900 bg-gray-300 z-0": isLoginTab === true,
           }
         )}
