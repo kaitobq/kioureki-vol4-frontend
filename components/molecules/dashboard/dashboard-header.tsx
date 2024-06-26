@@ -1,21 +1,12 @@
 "use client";
 
 import { DashboardHeaderLinks } from "@/components/atoms/dashboard/dashboard-header-links";
-import { useCurrentOrganization } from "@/lib/hooks/dashboard/use-current-organization";
-import { useOrganization } from "@/lib/hooks/dashboard/use-organizations";
+import { currentOrganizationAtom } from "@/lib/atom/dashboard";
+import { useAtom } from "jotai";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export function DashboardHeader() {
-  const { organizations } = useOrganization();
-  const { currentOrganization, loading } = useCurrentOrganization();
-
-  useEffect(() => {
-    if (!loading) {
-      console.log("Organizations:", organizations);
-      console.log("Current Organization:", currentOrganization);
-    }
-  }, [organizations, currentOrganization, loading]);
+  const [currentOrganization] = useAtom(currentOrganizationAtom);
 
   return (
     <>
@@ -23,9 +14,7 @@ export function DashboardHeader() {
         <Link href="/dashboard">
           <h1 className=" text-xl">Kioureki</h1>
         </Link>
-        {!loading && currentOrganization && (
-          <span>{currentOrganization.name}</span>
-        )}
+        {currentOrganization && <span>{currentOrganization.name}</span>}
       </div>
       <DashboardHeaderLinks />
     </>

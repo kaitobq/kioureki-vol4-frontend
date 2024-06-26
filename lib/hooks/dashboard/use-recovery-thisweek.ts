@@ -21,7 +21,7 @@ export default function useRecoveryThisWeek() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      console.log("k", response.data);
+      // console.log("k", response.data);
       setRecoveryThisWeek(response.data.medicalRecords);
       setLoading(false);
     } catch (error) {

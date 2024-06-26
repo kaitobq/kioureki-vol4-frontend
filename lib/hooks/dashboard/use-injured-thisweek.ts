@@ -21,7 +21,7 @@ export function useInjuredThisWeek() {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-      console.log("k", response.data);
+      // console.log("k", response.data);
       setInjuredThisWeek(response.data.medicalRecords);
       setLoading(false);
     } catch (error) {

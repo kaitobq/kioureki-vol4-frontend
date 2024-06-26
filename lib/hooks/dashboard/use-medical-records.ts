@@ -7,7 +7,7 @@ import {
   medicalRecordAtom,
 } from "@/lib/atom/dashboard";
 
-export default function useMedicalRecord() {
+export function useMedicalRecord() {
   const [currentOrganization] = useAtom(currentOrganizationAtom);
   const [medicalRecords, setMedicalRecords] = useAtom(medicalRecordAtom);
   const [loading, setLoading] = useState<boolean>(true);
@@ -23,7 +23,7 @@ export default function useMedicalRecord() {
       );
       setMedicalRecords(response.data.medicalRecords);
       setLoading(false);
-      console.log("medicalRecords", response.data.medicalRecords);
+      // console.log("medicalRecords", response.data.medicalRecords);
     } catch (error) {
       console.error(error);
     }
