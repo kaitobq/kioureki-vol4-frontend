@@ -20,3 +20,5 @@ function InputComponent(props: InputProps, ref: React.Ref<HTMLInputElement>) {
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(InputComponent);
+
+Input.displayName = "Input";
