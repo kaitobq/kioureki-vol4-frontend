@@ -23,7 +23,11 @@ function SelectorComponent(
         className
       )}
       {...rest}
+      defaultValue=""
     >
+      <option value="" disabled>
+        選択してください
+      </option>
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
@@ -36,3 +40,5 @@ function SelectorComponent(
 export const Selector = forwardRef<HTMLSelectElement, SelectorProps>(
   SelectorComponent
 );
+
+Selector.displayName = "Selector";
