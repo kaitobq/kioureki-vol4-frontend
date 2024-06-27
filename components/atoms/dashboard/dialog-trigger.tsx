@@ -1,9 +1,19 @@
+import { ComponentProps } from "react";
 import { Button } from "../common/button";
 
-interface DialogTriggerProps {
+interface DialogTriggerProps extends ComponentProps<"button"> {
   toggleDialog: () => void;
+  children?: React.ReactNode;
 }
 
-export function DialogTrigger({ toggleDialog }: DialogTriggerProps) {
-  return <Button onClick={toggleDialog}>DialogTrigger</Button>;
+export function DialogTrigger({
+  toggleDialog,
+  children,
+  ...rest
+}: DialogTriggerProps) {
+  return (
+    <Button onClick={toggleDialog} {...rest}>
+      {children}
+    </Button>
+  );
 }
