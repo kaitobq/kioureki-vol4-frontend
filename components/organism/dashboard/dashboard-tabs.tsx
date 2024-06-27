@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { MedicalRecordTab } from "../../molecules/dashboard/medical-record_tab";
+import { MedicalRecordTab } from "../../molecules/dashboard/medical-record-tab";
 import { RehabilitationTab } from "../../molecules/dashboard/rehabilitation-tab";
 import { PlayerTab } from "../../molecules/dashboard/player-tab";
 

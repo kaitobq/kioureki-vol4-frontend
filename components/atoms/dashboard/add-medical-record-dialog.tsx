@@ -41,7 +41,7 @@ export function AddMedicalRecordDialog({
   toggleDialog,
 }: AddMedicalRecordDialogProps) {
   const [players] = useAtom(playerAtom);
-  const { register, setValue, handleSubmit, errors, onSubmit } =
+  const { register, setValue, handleSubmit, errors, onSubmit, loading } =
     useAddMedicalRecord();
 
   if (!players) return null;
@@ -53,46 +53,87 @@ export function AddMedicalRecordDialog({
   return (
     <Dialog open={open} toggleDialog={toggleDialog} className="w-[600px]">
       <form id="addRecord" onSubmit={handleSubmit(onSubmit)}>
-        <h2>データの追加</h2>
-        <label htmlFor="player">
-          選手<span className="text-red-600 mx-1">*</span>
-        </label>
-        <Selector
-          id="player"
-          options={playerOptions}
-          onChange={(e) => setValue("player_id", Number(e.target.value))}
-        />
-        <label htmlFor="status">
-          治療状況<span className="text-red-600 mx-1">*</span>
-        </label>
-        <Selector
-          id="status"
-          options={statusValues.map((status) => ({
-            value: status,
-            label: status,
-          }))}
-          onChange={(e) => setValue("status", e.target.value)}
-        />
-        <label htmlFor="part">
-          受傷箇所<span className="text-red-600 mx-1">*</span>
-        </label>
-        <Selector
-          id="part"
-          options={partValues.map((part) => ({ value: part, label: part }))}
-          onChange={(e) => setValue("part", e.target.value)}
-        />
-        <label htmlFor="diagnosis">診断</label>
-        <Input id="diagnosis" {...register("diagnosis")} />
-        <label htmlFor="injury_date">受傷日</label>
-        <Input id="injury_date" type="date" {...register("injury_date")} />
-        <label htmlFor="recovery_date">復帰予定日</label>
-        <Input id="recovery_date" type="date" {...register("recovery_date")} />
-        <label htmlFor="memo">備考</label>
-        <TextArea id="memo" rows={4} {...register("memo")} />
+        <h2 className="text-xl font-semibold">データの追加</h2>
+        <div className="my-2">
+          <label htmlFor="player">
+            選手<span className="text-red-600 mx-1">*</span>
+          </label>
+          <Selector
+            id="player"
+            options={playerOptions}
+            onChange={(e) => setValue("player_id", Number(e.target.value))}
+          />
+          {errors.player_id && (
+            <p className="text-red-600">{errors.player_id.message}</p>
+          )}
+        </div>
+        <div className="my-2">
+          <label htmlFor="status">
+            治療状況<span className="text-red-600 mx-1">*</span>
+          </label>
+          <Selector
+            id="status"
+            options={statusValues.map((status) => ({
+              value: status,
+              label: status,
+            }))}
+            onChange={(e) => setValue("status", e.target.value)}
+          />
+          {errors.status && (
+            <p className="text-red-600">{errors.status.message}</p>
+          )}
+        </div>
+        <div className="my-2">
+          <label htmlFor="part">
+            受傷箇所<span className="text-red-600 mx-1">*</span>
+          </label>
+          <Selector
+            id="part"
+            options={partValues.map((part) => ({ value: part, label: part }))}
+            onChange={(e) => setValue("part", e.target.value)}
+          />
+          {errors.part && <p className="text-red-600">{errors.part.message}</p>}
+        </div>
+        <div className="my-2">
+          <label htmlFor="diagnosis">診断</label>
+          <Input id="diagnosis" {...register("diagnosis")} />
+          {errors.diagnosis && (
+            <p className="text-red-600">{errors.diagnosis.message}</p>
+          )}
+        </div>
+        <div className="my-2">
+          <label htmlFor="injury_date">受傷日</label>
+          <Input id="injury_date" type="date" {...register("injury_date")} />
+          {errors.injury_date && (
+            <p className="text-red-600">{errors.injury_date.message}</p>
+          )}
+        </div>
+        <div className="my-2">
+          <label htmlFor="recovery_date">復帰予定日</label>
+          <Input
+            id="recovery_date"
+            type="date"
+            {...register("recovery_date")}
+          />
+          {errors.recovery_date && (
+            <p className="text-red-600">{errors.recovery_date.message}</p>
+          )}
+        </div>
+        <div className="my-2">
+          <label htmlFor="memo">備考</label>
+          <TextArea id="memo" rows={4} {...register("memo")} />
+          {errors.memo && <p className="text-red-600">{errors.memo.message}</p>}
+        </div>
       </form>
-      <Button type="submit" form="addRecord">
-        追加
-      </Button>
+      <div className="flex justify-end mt-3">
+        {loading ? (
+          <Button loading />
+        ) : (
+          <Button type="submit" form="addRecord">
+            追加
+          </Button>
+        )}
+      </div>
     </Dialog>
   );
 }

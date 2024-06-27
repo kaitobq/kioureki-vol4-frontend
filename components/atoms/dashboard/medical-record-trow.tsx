@@ -18,11 +18,15 @@ export function MedicalRecordTRow({ record }: MedicalRecordTRowProps) {
       }}
       // onClick={() => setRecord(record)}
     >
-      <h3 className="text-xl w-1/3 sm:w-1/6">{record.player.name}</h3>
-      <h3 className="text-xl w-1/3 sm:w-1/6">{record.part}</h3>
-      <h3 className="text-xl w-1/2 sm:w-1/6">{record.diagnosis}</h3>
+      <h3 className="text-xl w-1/3 sm:w-1/6">
+        {record.player && record.player.name}
+      </h3>
+      <h3 className="text-xl w-1/3 sm:w-1/6">{record.part && record.part}</h3>
+      <h3 className="text-xl w-1/2 sm:w-1/6">
+        {record.diagnosis && record.diagnosis}
+      </h3>
       <h3 className="text-xl w-1/2 sm:w-1/6 sm:ml-20">
-        {record.injury_date.split("T")[0]}
+        {record.injury_date && record.injury_date.split("T")[0]}
       </h3>
       <h3 className="text-xl w-1/6 hidden sm:inline">
         {record.recovery_date && record.recovery_date.split("T")[0]}

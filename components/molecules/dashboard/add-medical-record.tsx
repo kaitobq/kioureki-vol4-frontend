@@ -9,8 +9,8 @@ export function AddMedicalRecord() {
   };
 
   return (
-    <div>
-      <DialogTrigger toggleDialog={toggleDialog} />
+    <div className="flex justify-end my-3">
+      <DialogTrigger toggleDialog={toggleDialog}>追加</DialogTrigger>
       <AddMedicalRecordDialog open={open} toggleDialog={toggleDialog} />
     </div>
   );
