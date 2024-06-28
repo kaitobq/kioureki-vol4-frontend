@@ -1,3 +1,9 @@
+import { RehabilitationTable } from "./rehabilitation-table";
+
 export function RehabilitationTab() {
-  return <div>RehabilitationTab</div>;
+  return (
+    <div>
+      <RehabilitationTable />
+    </div>
+  );
 }
