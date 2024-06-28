@@ -2,6 +2,7 @@
 
 import Dashboard from "@/components/organism/dashboard/dashboard";
 import { useCurrentOrganization } from "@/lib/hooks/dashboard/use-current-organization";
+import { useMedicalRecord } from "@/lib/hooks/dashboard/use-medical-records";
 import { useOrganization } from "@/lib/hooks/dashboard/use-organizations";
 import { usePlayer } from "@/lib/hooks/dashboard/use-player";
 import { AuthProvider } from "@/lib/utils/auth/auth-provider";
@@ -11,10 +12,11 @@ export default function DashboardPage() {
   const { organizations } = useOrganization();
   const { currentOrganization } = useCurrentOrganization();
   const { players } = usePlayer();
+  const { medicalRecords } = useMedicalRecord();
 
   useEffect(() => {
     console.log("[dashboard page] : fetching ...");
-    if (!organizations || !currentOrganization || !players) {
+    if (!organizations || !currentOrganization || !players || !medicalRecords) {
       return;
     } else {
       console.log("[dashboard page] : Organizations:", organizations);
@@ -23,9 +25,10 @@ export default function DashboardPage() {
         currentOrganization
       );
       console.log("[dashboard page] : Players:", players);
+      console.log("[dashboard page] : MedicalRecords:", medicalRecords);
       console.log("[dashboard page] : DONE!!!!!");
     }
-  }, [organizations, currentOrganization, players]);
+  }, [organizations, currentOrganization, players, medicalRecords]);
 
   return (
     <AuthProvider>
