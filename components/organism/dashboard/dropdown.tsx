@@ -1,6 +1,6 @@
 "use client";
 
-import { DropdownTrigger } from "@/components/atoms/dashboard/dropdown-triger";
+import { DropdownTrigger } from "@/components/atoms/common/dropdown-triger";
 import { DropdownMenu } from "@/components/molecules/common/dropdown-menu";
 import { useEffect, useRef, useState } from "react";
 

@@ -1,11 +1,11 @@
 import { useAtom } from "jotai";
-import { Button } from "../common/button";
-import { Dialog } from "./dialog";
+import { Button } from "../../common/button";
+import { Dialog } from "../../common/dialog";
 import { playerAtom } from "@/lib/atom/dashboard";
-import { Selector } from "../common/selector";
+import { Selector } from "../../common/selector";
 import { useEffect, useState } from "react";
-import { Input } from "../common/input";
-import { TextArea } from "../common/textarea";
+import { Input } from "../../common/input";
+import { TextArea } from "../../common/textarea";
 import { useAddMedicalRecord } from "@/lib/hooks/dashboard/use-add-medical-record";
 
 interface AddMedicalRecordDialogProps {

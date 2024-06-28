@@ -1,4 +1,4 @@
-import { Skeleton } from "../common/skeleton";
+import { Skeleton } from "../../common/skeleton";
 
 export function MedicalRecordSkeleton() {
   return (

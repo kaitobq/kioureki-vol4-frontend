@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { MedicalRecordTBody } from "./medical-record-tbody";
 import {
   MedicalRecordTHead,
   SortColumn,
-} from "@/components/atoms/dashboard/medical-record-thead";
-import { MedicalRecordTBody } from "./medical-record-tbody";
+} from "@/components/atoms/dashboard/medical-record/medical-record-thead";
 
 type SortDirection = "asc" | "desc" | null;
 

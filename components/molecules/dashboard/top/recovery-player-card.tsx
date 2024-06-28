@@ -1,9 +1,9 @@
 "use client";
 
 import { Card } from "@/components/atoms/common/card";
-import { DashboardTBody } from "@/components/atoms/dashboard/dashboard-tbody";
-import { DashboardTHead } from "@/components/atoms/dashboard/dashboard-thead";
-import { SkeletonTable } from "@/components/atoms/dashboard/skeleton-table";
+import { DashboardTBody } from "@/components/atoms/dashboard/top/dashboard-tbody";
+import { DashboardTHead } from "@/components/atoms/dashboard/top/dashboard-thead";
+import { SkeletonTable } from "@/components/atoms/dashboard/top/skeleton-table";
 import useRecoveryThisWeek from "@/lib/hooks/dashboard/use-recovery-thisweek";
 
 export function RecoveryPlayerCard() {

@@ -1,5 +1,5 @@
-import { AddMedicalRecordDialog } from "@/components/atoms/dashboard/add-medical-record-dialog";
-import { DialogTrigger } from "@/components/atoms/dashboard/dialog-trigger";
+import { DialogTrigger } from "@/components/atoms/common/dialog-trigger";
+import { AddMedicalRecordDialog } from "@/components/atoms/dashboard/medical-record/add-medical-record-dialog";
 import { useState } from "react";
 
 export function AddMedicalRecord() {

@@ -1,9 +1,9 @@
-import { MedicalRecordSkeleton } from "../../../atoms/dashboard/medical-record-skeleton";
-import { MedicalRecordTRow } from "../../../atoms/dashboard/medical-record-trow";
+import { MedicalRecordSkeleton } from "../../../atoms/dashboard/medical-record/medical-record-skeleton";
+import { MedicalRecordTRow } from "../../../atoms/dashboard/medical-record/medical-record-trow";
 import { useAtom } from "jotai";
 import { medicalRecordAtom } from "@/lib/atom/dashboard";
 import { useMemo } from "react";
-import { SortColumn } from "@/components/atoms/dashboard/medical-record-thead";
+import { SortColumn } from "@/components/atoms/dashboard/medical-record/medical-record-thead";
 
 interface MedicalRecordTBodyProps {
   sortColumn: SortColumn | null;

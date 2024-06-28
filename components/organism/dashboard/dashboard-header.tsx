@@ -1,6 +1,6 @@
 "use client";
 
-import { DashboardHeaderLinks } from "@/components/atoms/dashboard/dashboard-header-links";
+import { DashboardHeaderLinks } from "@/components/atoms/dashboard/top/dashboard-header-links";
 import { currentOrganizationAtom } from "@/lib/atom/dashboard";
 import { useAtom } from "jotai";
 import Link from "next/link";

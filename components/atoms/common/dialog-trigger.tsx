@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { Button } from "../common/button";
+import { Button } from "./button";
 
 interface DialogTriggerProps extends ComponentProps<"button"> {
   toggleDialog: () => void;
