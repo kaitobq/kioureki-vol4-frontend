@@ -1,7 +1,7 @@
 "use client";
 
 import { SkeletonTable } from "@/components/atoms/dashboard/skeleton-table";
-import { Card } from "../../atoms/common/card";
+import { Card } from "../../../atoms/common/card";
 import { useInjuredThisWeek } from "@/lib/hooks/dashboard/use-injured-thisweek";
 import { DashboardTHead } from "@/components/atoms/dashboard/dashboard-thead";
 import { DashboardTBody } from "@/components/atoms/dashboard/dashboard-tbody";

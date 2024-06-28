@@ -1,5 +1,5 @@
-import { DashboardBody } from "@/components/molecules/dashboard/dashboard-body";
-import { DashboardHeader } from "../../molecules/dashboard/dashboard-header";
+import { DashboardBody } from "@/components/molecules/dashboard/top/dashboard-body";
+import { DashboardHeader } from "./dashboard-header";
 import { DashboardTabs } from "./dashboard-tabs";
 
 export default function Dashboard() {

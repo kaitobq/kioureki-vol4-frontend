@@ -1,7 +1,7 @@
 "use client";
 
 import { DropdownTrigger } from "@/components/atoms/dashboard/dropdown-triger";
-import { DropdownMenu } from "@/components/molecules/dashboard/dropdown-menu";
+import { DropdownMenu } from "@/components/molecules/common/dropdown-menu";
 import { useEffect, useRef, useState } from "react";
 
 interface DropdownProps {
@@ -24,7 +24,7 @@ export function Dropdown({ list, defaultValue }: DropdownProps) {
       <DropdownMenu
         stateRef={stateRef}
         setStateRef={setStateRef}
-        dropdownList={list} //list
+        dropdownList={list}
         setCurrentValue={setCurrentValue}
       />
     </div>

@@ -1,9 +1,9 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { MedicalRecordTab } from "../../molecules/dashboard/medical-record-tab";
-import { RehabilitationTab } from "../../molecules/dashboard/rehabilitation-tab";
-import { PlayerTab } from "../../molecules/dashboard/player-tab";
+import { MedicalRecordTab } from "../../molecules/dashboard/medical-record/medical-record-tab";
+import { RehabilitationTab } from "../../molecules/dashboard/rehabilitation/rehabilitation-tab";
+import { PlayerTab } from "../../molecules/dashboard/player/player-tab";
 
 export function DashboardTabs() {
   const params = useSearchParams();
