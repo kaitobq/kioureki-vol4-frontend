@@ -11,7 +11,7 @@ export function RehabilitationTBody() {
       {records.map((record) => (
         <tr
           key={record.ID}
-          className="flex hover:bg-gray-100 transition-colors duration-150 border-b text-sm *:p-3 *:text-center"
+          className="flex hover:bg-gray-100 transition-colors duration-150 border-b text-sm *:p-3 *:text-center cursor-pointer"
         >
           <td className="w-[150px]">{record.player.name}</td>
           <td className="w-[100px]">{record.diagnosis}</td>

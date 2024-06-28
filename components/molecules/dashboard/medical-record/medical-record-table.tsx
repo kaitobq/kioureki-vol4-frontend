@@ -13,7 +13,6 @@ export function MedicalRecordTable() {
 
   const handleSort = (column: SortColumn) => {
     if (sortColumn === column) {
-      // 同じカラムがクリックされた場合
       if (sortDirection === "asc") {
         setSortDirection("desc");
       } else if (sortDirection === "desc") {
@@ -23,7 +22,6 @@ export function MedicalRecordTable() {
         setSortDirection("asc");
       }
     } else {
-      // 新しいカラムがクリックされた場合
       setSortColumn(column);
       setSortDirection("asc");
     }
