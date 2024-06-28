@@ -1,3 +1,9 @@
+import { PlayerTable } from "./player-table";
+
 export function PlayerTab() {
-  return <div>PlayerTab</div>;
+  return (
+    <div>
+      <PlayerTable />
+    </div>
+  );
 }
