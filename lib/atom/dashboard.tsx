@@ -12,6 +12,6 @@ export const medicalRecordAtom = atom<MedicalRecord[] | null>(null);
 
 export const playerAtom = atom<Player[] | null>(null);
 
-export const playerDetailAtom = atom<PlayerDetail | null>(null);
+export const playerDetailAtom = atom<PlayerDetail[] | null>(null);
 
 export const rehabilitationAtom = atom<MedicalRecord[] | null>(null);
