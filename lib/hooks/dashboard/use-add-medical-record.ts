@@ -9,6 +9,7 @@ import {
   medicalRecordAtom,
 } from "@/lib/atom/dashboard";
 import { zodResolver } from "@hookform/resolvers/zod";
+import toast from "react-hot-toast";
 
 const recordSchema = z.object({
   player_id: z.number().min(1, { message: "Player ID is required" }),
@@ -59,6 +60,7 @@ export function useAddMedicalRecord(toggleDialog: () => void) {
       reset();
       toggleDialog();
       // toast表示
+      toast.success("データを追加しました。");
     } catch (error) {
       console.error("[useAddMedicalRecord] : ", error);
       console.log("[useAddMedicalRecord] : failed!");
