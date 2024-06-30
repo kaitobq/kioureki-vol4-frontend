@@ -3,7 +3,6 @@ import { Button } from "../../common/button";
 import { Dialog } from "../../common/dialog";
 import { playerAtom } from "@/lib/atom/dashboard";
 import { Selector } from "../../common/selector";
-import { useEffect, useState } from "react";
 import { Input } from "../../common/input";
 import { TextArea } from "../../common/textarea";
 import { useAddMedicalRecord } from "@/lib/hooks/dashboard/use-add-medical-record";
@@ -42,7 +41,7 @@ export function AddMedicalRecordDialog({
 }: AddMedicalRecordDialogProps) {
   const [players] = useAtom(playerAtom);
   const { register, setValue, handleSubmit, errors, onSubmit, loading } =
-    useAddMedicalRecord();
+    useAddMedicalRecord(toggleDialog);
 
   if (!players) return null;
   const playerOptions = players.map((player) => ({

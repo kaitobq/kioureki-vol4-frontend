@@ -22,13 +22,14 @@ const recordSchema = z.object({
 
 type addRecordInputs = z.infer<typeof recordSchema>;
 
-export function useAddMedicalRecord() {
+export function useAddMedicalRecord(toggleDialog: () => void) {
   const [loading, setLoading] = useState(false);
   const {
     register,
     setValue,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<addRecordInputs>({
     resolver: zodResolver(recordSchema),
   });
@@ -55,6 +56,8 @@ export function useAddMedicalRecord() {
       } else {
         setMedicalRecords([...medicalRecords, response.data.added_record]);
       }
+      reset();
+      toggleDialog();
       // toast表示
     } catch (error) {
       console.error("[useAddMedicalRecord] : ", error);
